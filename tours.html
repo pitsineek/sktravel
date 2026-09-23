@@ -2,159 +2,1757 @@
 <html lang="th">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>แพ็กเกจทัวร์ | SK Travel&Tour Hatyai</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <link rel="stylesheet" href="style.css">
+    <title>
+        แพ็กเกจทัวร์ | SK Travel&Tour Hatyai
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+    <style>
+
+        /* =========================================
+           TOURS PAGE
+           ========================================= */
+
+        .tour-page-hero {
+
+            min-height: 330px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            position: relative;
+
+            background-image:
+                url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1800&q=85");
+
+            background-size: cover;
+
+            background-position: center;
+
+        }
+
+        .tour-page-hero::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+                rgba(0, 0, 0, 0.48);
+
+        }
+
+        .tour-page-hero-content {
+
+            position: relative;
+
+            z-index: 2;
+
+            color: white;
+
+            padding: 40px 20px;
+
+        }
+
+        .tour-page-hero-content p {
+
+            color: #a9f0d7;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 10px;
+
+        }
+
+        .tour-page-hero-content h1 {
+
+            font-size: clamp(35px, 5vw, 52px);
+
+            margin-bottom: 10px;
+
+        }
+
+        .tour-page-hero-content span {
+
+            font-size: 16px;
+
+            opacity: 0.9;
+
+        }
+
+
+        /* FILTER */
+
+        .tour-filter-section {
+
+            background: #f5f9f8;
+
+            padding: 35px 20px;
+
+        }
+
+        .tour-filter {
+
+            max-width: 1200px;
+
+            margin: auto;
+
+            background: white;
+
+            padding: 22px;
+
+            border-radius: 14px;
+
+            box-shadow:
+                0 5px 20px rgba(0,0,0,0.05);
+
+        }
+
+        .filter-title {
+
+            font-size: 18px;
+
+            font-weight: 700;
+
+            margin-bottom: 15px;
+
+        }
+
+        .filter-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                1.2fr 1fr 1fr auto;
+
+            gap: 10px;
+
+        }
+
+        .filter-grid select {
+
+            width: 100%;
+
+            padding: 12px;
+
+            border: 1px solid #ddd;
+
+            border-radius: 8px;
+
+            background: white;
+
+            font-size: 14px;
+
+        }
+
+        .filter-grid button {
+
+            border: none;
+
+            padding: 0 25px;
+
+            border-radius: 8px;
+
+            background: #087f5b;
+
+            color: white;
+
+            font-weight: 600;
+
+            cursor: pointer;
+
+        }
+
+        .filter-grid button:hover {
+
+            background: #066b4c;
+
+        }
+
+
+        /* TOUR LIST */
+
+        .tour-list-section {
+
+            max-width: 1200px;
+
+            margin: auto;
+
+            padding: 70px 20px;
+
+        }
+
+        .tour-list-header {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: end;
+
+            margin-bottom: 30px;
+
+        }
+
+        .tour-list-header h2 {
+
+            font-size: 30px;
+
+        }
+
+        .tour-list-header p {
+
+            color: #777;
+
+            font-size: 14px;
+
+        }
+
+
+        .tour-page-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+
+        }
+
+
+        /* CARD */
+
+        .tour-page-card {
+
+            background: white;
+
+            border: 1px solid #eeeeee;
+
+            border-radius: 14px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 5px 20px rgba(0,0,0,0.05);
+
+            transition: 0.25s;
+
+        }
+
+        .tour-page-card:hover {
+
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 12px 30px rgba(0,0,0,0.10);
+
+        }
+
+        .tour-page-image {
+
+            height: 230px;
+
+            position: relative;
+
+            overflow: hidden;
+
+        }
+
+        .tour-page-image img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: 0.4s;
+
+        }
+
+        .tour-page-card:hover
+        .tour-page-image img {
+
+            transform: scale(1.05);
+
+        }
+
+        .tour-page-tag {
+
+            position: absolute;
+
+            top: 15px;
+
+            left: 15px;
+
+            background: #087f5b;
+
+            color: white;
+
+            padding: 5px 10px;
+
+            border-radius: 5px;
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+        }
+
+        .favorite-button {
+
+            position: absolute;
+
+            top: 12px;
+
+            right: 12px;
+
+            width: 38px;
+
+            height: 38px;
+
+            border: none;
+
+            border-radius: 50%;
+
+            background: white;
+
+            cursor: pointer;
+
+            font-size: 18px;
+
+            box-shadow:
+                0 3px 10px rgba(0,0,0,0.15);
+
+        }
+
+        .tour-page-content {
+
+            padding: 22px;
+
+        }
+
+        .tour-page-location {
+
+            color: #087f5b;
+
+            font-size: 13px;
+
+            margin-bottom: 5px;
+
+        }
+
+        .tour-page-content h3 {
+
+            font-size: 20px;
+
+            margin-bottom: 8px;
+
+        }
+
+        .tour-page-description {
+
+            color: #777;
+
+            font-size: 14px;
+
+            min-height: 65px;
+
+            margin-bottom: 15px;
+
+        }
+
+        .tour-info {
+
+            display: flex;
+
+            gap: 15px;
+
+            color: #666;
+
+            font-size: 12px;
+
+            padding-bottom: 15px;
+
+            border-bottom: 1px solid #eee;
+
+        }
+
+        .tour-price-row {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            margin-top: 15px;
+
+        }
+
+        .tour-price {
+
+            color: #087f5b;
+
+            font-size: 18px;
+
+            font-weight: 700;
+
+        }
+
+        .tour-price small {
+
+            color: #777;
+
+            font-size: 11px;
+
+            font-weight: normal;
+
+        }
+
+        .tour-card-buttons {
+
+            display: flex;
+
+            gap: 8px;
+
+        }
+
+        .detail-button {
+
+            padding: 8px 12px;
+
+            border: 1px solid #087f5b;
+
+            color: #087f5b;
+
+            border-radius: 7px;
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+        }
+
+        .book-button {
+
+            padding: 8px 12px;
+
+            background: #087f5b;
+
+            color: white;
+
+            border-radius: 7px;
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+        }
+
+
+        /* CATEGORY */
+
+        .tour-category {
+
+            max-width: 1200px;
+
+            margin: 0 auto 50px;
+
+            padding: 0 20px;
+
+        }
+
+        .tour-category-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 15px;
+
+        }
+
+        .category-button {
+
+            padding: 18px;
+
+            text-align: center;
+
+            border: 1px solid #eee;
+
+            border-radius: 12px;
+
+            background: white;
+
+            cursor: pointer;
+
+            transition: 0.2s;
+
+        }
+
+        .category-button:hover {
+
+            border-color: #087f5b;
+
+            color: #087f5b;
+
+        }
+
+        .category-button strong {
+
+            display: block;
+
+            font-size: 16px;
+
+            margin-bottom: 4px;
+
+        }
+
+        .category-button span {
+
+            color: #888;
+
+            font-size: 12px;
+
+        }
+
+
+        /* EMPTY */
+
+        .empty-tour {
+
+            display: none;
+
+            text-align: center;
+
+            padding: 50px;
+
+            color: #777;
+
+        }
+
+
+        /* RESPONSIVE */
+
+        @media (max-width: 1000px) {
+
+            .tour-page-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+            }
+
+            .filter-grid {
+
+                grid-template-columns:
+                    1fr 1fr;
+
+            }
+
+            .filter-grid button {
+
+                padding: 12px;
+
+            }
+
+            .tour-category-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+            }
+
+        }
+
+
+        @media (max-width: 700px) {
+
+            .tour-page-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .filter-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .tour-category-grid {
+
+                grid-template-columns: 1fr 1fr;
+
+            }
+
+            .tour-list-header {
+
+                align-items: flex-start;
+
+                flex-direction: column;
+
+                gap: 5px;
+
+            }
+
+        }
+
+
+        @media (max-width: 450px) {
+
+            .tour-category-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .tour-card-buttons {
+
+                flex-direction: column;
+
+            }
+
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
-    <header class="header">
 
-        <div class="logo">
-            🌴 SK Travel&Tour
+    <!-- TOP BAR -->
+
+    <div class="top-bar">
+
+        <div class="top-bar-container">
+
+            <div>
+                📞 โทร: 08X-XXX-XXXX
+            </div>
+
+            <div>
+                💬 Line: @sktravel
+            </div>
+
         </div>
 
-        <nav class="menu">
-            <a href="index.html">หน้าแรก</a>
-            <a href="tours.html">แพ็กเกจทัวร์</a>
-            <a href="booking.html">จองทัวร์</a>
-            <a href="login.html">เข้าสู่ระบบ</a>
-        </nav>
+    </div>
+
+
+    <!-- HEADER -->
+
+    <header class="main-header">
+
+        <div class="header-container">
+
+
+            <a
+                href="index.html"
+                class="site-logo"
+            >
+
+                <span class="logo-icon">
+                    🌴
+                </span>
+
+                <div>
+
+                    <strong>
+                        SK Travel&Tour
+                    </strong>
+
+                    <small>
+                        HATYAI
+                    </small>
+
+                </div>
+
+            </a>
+
+
+            <nav class="main-menu">
+
+                <a href="index.html">
+                    หน้าแรก
+                </a>
+
+                <a
+                    href="tours.html"
+                    class="active"
+                >
+                    แพ็กเกจทัวร์
+                </a>
+
+                <a href="recommend.html">
+                    🤖 แนะนำทัวร์
+                </a>
+
+                <a href="booking.html">
+                    จองทัวร์
+                </a>
+
+                <a href="about.html">
+                    เกี่ยวกับเรา
+                </a>
+
+                <a href="contact.html">
+                    ติดต่อเรา
+                </a>
+
+            </nav>
+
+
+            <a
+                href="login.html"
+                class="member-button"
+            >
+                👤 สมาชิก
+            </a>
+
+        </div>
 
     </header>
 
 
-    <section class="hero">
+    <!-- HERO -->
 
-        <div class="hero-content">
+    <section class="tour-page-hero">
 
-            <p class="small-title">
-                SK TRAVEL&TOUR HATYAI
+        <div class="tour-page-hero-content">
+
+            <p>
+                SK TRAVEL&TOUR
             </p>
 
             <h1>
                 แพ็กเกจทัวร์
             </h1>
 
-            <p class="hero-text">
-                เลือกแพ็กเกจทัวร์ที่เหมาะกับการเดินทางของคุณ
-            </p>
+            <span>
+                ค้นหาโปรแกรมท่องเที่ยว
+                ที่เหมาะกับคุณ
+            </span>
 
         </div>
 
     </section>
 
 
-    <section class="services">
+    <!-- FILTER -->
 
-        <div class="section-title">
+    <section class="tour-filter-section">
 
-            <p>TOUR PACKAGES</p>
+        <div class="tour-filter">
+
+            <div class="filter-title">
+                🔎 ค้นหาโปรแกรมทัวร์
+            </div>
+
+            <div class="filter-grid">
+
+                <select id="destinationFilter">
+
+                    <option value="">
+                        ทุกจุดหมายปลายทาง
+                    </option>
+
+                    <option value="หลีเป๊ะ">
+                        เกาะหลีเป๊ะ
+                    </option>
+
+                    <option value="กระบี่">
+                        กระบี่
+                    </option>
+
+                    <option value="ภูเก็ต">
+                        ภูเก็ต
+                    </option>
+
+                    <option value="พังงา">
+                        พังงา
+                    </option>
+
+                    <option value="สงขลา">
+                        สงขลา
+                    </option>
+
+                </select>
+
+
+                <select id="typeFilter">
+
+                    <option value="">
+                        ทุกประเภท
+                    </option>
+
+                    <option value="ทะเล">
+                        🏝️ ทะเล
+                    </option>
+
+                    <option value="เกาะ">
+                        🏖️ เกาะ
+                    </option>
+
+                    <option value="ธรรมชาติ">
+                        🌿 ธรรมชาติ
+                    </option>
+
+                    <option value="วัฒนธรรม">
+                        🕌 วัฒนธรรม
+                    </option>
+
+                </select>
+
+
+                <select id="priceFilter">
+
+                    <option value="">
+                        ทุกช่วงราคา
+                    </option>
+
+                    <option value="low">
+                        ต่ำกว่า 2,000 บาท
+                    </option>
+
+                    <option value="medium">
+                        2,000 - 5,000 บาท
+                    </option>
+
+                    <option value="high">
+                        มากกว่า 5,000 บาท
+                    </option>
+
+                </select>
+
+
+                <button
+                    type="button"
+                    onclick="filterTours()"
+                >
+                    ค้นหา
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CATEGORY -->
+
+    <section class="tour-category">
+
+        <div class="section-heading">
+
+            <p>
+                TOUR CATEGORIES
+            </p>
 
             <h2>
-                แพ็กเกจทัวร์ของเรา
+                เลือกตามประเภททัวร์
             </h2>
 
         </div>
 
 
-        <div class="service-container">
+        <div class="tour-category-grid">
 
-            <div class="service-card">
+            <button
+                class="category-button"
+                onclick="chooseCategory('ทะเล')"
+            >
+                <strong>🏝️ ทัวร์ทะเล</strong>
+                <span>พักผ่อนริมทะเล</span>
+            </button>
 
-                <div class="icon">
-                    🏝️
-                </div>
+            <button
+                class="category-button"
+                onclick="chooseCategory('เกาะ')"
+            >
+                <strong>🏖️ ทัวร์เกาะ</strong>
+                <span>เที่ยวเกาะและดำน้ำ</span>
+            </button>
 
-                <h3>
-                    ทัวร์ทะเล
-                </h3>
+            <button
+                class="category-button"
+                onclick="chooseCategory('ธรรมชาติ')"
+            >
+                <strong>🌿 ธรรมชาติ</strong>
+                <span>ภูเขา น้ำตก ป่า</span>
+            </button>
 
-                <p>
-                    สัมผัสความสวยงามของทะเล
-                    และสถานที่ท่องเที่ยวทางธรรมชาติ
-                </p>
-
-                <br>
-
-                <a href="booking.html" class="btn primary">
-                    จองทัวร์
-                </a>
-
-            </div>
-
-
-            <div class="service-card">
-
-                <div class="icon">
-                    🌊
-                </div>
-
-                <h3>
-                    ทัวร์เกาะ
-                </h3>
-
-                <p>
-                    เดินทางไปสัมผัสความสวยงาม
-                    ของหมู่เกาะและชายหาด
-                </p>
-
-                <br>
-
-                <a href="booking.html" class="btn primary">
-                    จองทัวร์
-                </a>
-
-            </div>
-
-
-            <div class="service-card">
-
-                <div class="icon">
-                    🏔️
-                </div>
-
-                <h3>
-                    ทัวร์ธรรมชาติ
-                </h3>
-
-                <p>
-                    เที่ยวชมธรรมชาติ
-                    และสถานที่ท่องเที่ยวที่น่าสนใจ
-                </p>
-
-                <br>
-
-                <a href="booking.html" class="btn primary">
-                    จองทัวร์
-                </a>
-
-            </div>
+            <button
+                class="category-button"
+                onclick="chooseCategory('วัฒนธรรม')"
+            >
+                <strong>🕌 วัฒนธรรม</strong>
+                <span>เรียนรู้วิถีและชุมชน</span>
+            </button>
 
         </div>
 
     </section>
 
 
-    <footer class="footer">
+    <!-- TOUR LIST -->
 
-        <div class="footer-logo">
-            🌴 SK Travel&Tour Hatyai
+    <main class="tour-list-section">
+
+
+        <div class="tour-list-header">
+
+            <div>
+
+                <h2>
+                    โปรแกรมทัวร์ทั้งหมด
+                </h2>
+
+                <p id="tourCount">
+                    พบ 6 โปรแกรมทัวร์
+                </p>
+
+            </div>
+
         </div>
 
-        <p>
-            บริการท่องเที่ยวและจองทัวร์
-        </p>
 
-        <p class="copyright">
+        <div
+            class="tour-page-grid"
+            id="tourGrid"
+        >
+
+
+            <!-- TOUR 1 -->
+
+            <article
+                class="tour-page-card"
+                data-destination="หลีเป๊ะ"
+                data-type="เกาะ"
+                data-price="medium"
+            >
+
+                <div class="tour-page-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=900&q=80"
+                        alt="เกาะหลีเป๊ะ"
+                    >
+
+                    <span class="tour-page-tag">
+                        ยอดนิยม
+                    </span>
+
+                    <button
+                        class="favorite-button"
+                        onclick="addFavorite(this)"
+                    >
+                        ♡
+                    </button>
+
+                </div>
+
+
+                <div class="tour-page-content">
+
+                    <p class="tour-page-location">
+                        🏝️ สตูล
+                    </p>
+
+                    <h3>
+                        ทัวร์เกาะหลีเป๊ะ
+                    </h3>
+
+                    <p class="tour-page-description">
+                        เที่ยวเกาะหลีเป๊ะ
+                        ชมทะเลใส
+                        หาดทรายสวย
+                        และดำน้ำดูปะการัง
+                    </p>
+
+                    <div class="tour-info">
+
+                        <span>
+                            📅 3 วัน 2 คืน
+                        </span>
+
+                        <span>
+                            👥 สูงสุด 15 คน
+                        </span>
+
+                    </div>
+
+                    <div class="tour-price-row">
+
+                        <div class="tour-price">
+                            ฿3,990
+                            <small>/คน</small>
+                        </div>
+
+                        <div class="tour-card-buttons">
+
+                            <a
+                                href="tour-detail.html"
+                                class="detail-button"
+                            >
+                                รายละเอียด
+                            </a>
+
+                            <a
+                                href="booking.html"
+                                class="book-button"
+                            >
+                                จอง
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- TOUR 2 -->
+
+            <article
+                class="tour-page-card"
+                data-destination="กระบี่"
+                data-type="ทะเล"
+                data-price="medium"
+            >
+
+                <div class="tour-page-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80"
+                        alt="กระบี่"
+                    >
+
+                    <span class="tour-page-tag">
+                        แนะนำ
+                    </span>
+
+                    <button
+                        class="favorite-button"
+                        onclick="addFavorite(this)"
+                    >
+                        ♡
+                    </button>
+
+                </div>
+
+
+                <div class="tour-page-content">
+
+                    <p class="tour-page-location">
+                        🏝️ กระบี่
+                    </p>
+
+                    <h3>
+                        ทัวร์กระบี่ 4 เกาะ
+                    </h3>
+
+                    <p class="tour-page-description">
+                        เที่ยวทะเลกระบี่
+                        ชมเกาะและหาดทราย
+                        พร้อมกิจกรรมทางทะเล
+                    </p>
+
+                    <div class="tour-info">
+
+                        <span>
+                            📅 1 วัน
+                        </span>
+
+                        <span>
+                            👥 สูงสุด 20 คน
+                        </span>
+
+                    </div>
+
+                    <div class="tour-price-row">
+
+                        <div class="tour-price">
+                            ฿2,490
+                            <small>/คน</small>
+                        </div>
+
+                        <div class="tour-card-buttons">
+
+                            <a
+                                href="tour-detail.html"
+                                class="detail-button"
+                            >
+                                รายละเอียด
+                            </a>
+
+                            <a
+                                href="booking.html"
+                                class="book-button"
+                            >
+                                จอง
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- TOUR 3 -->
+
+            <article
+                class="tour-page-card"
+                data-destination="ภูเก็ต"
+                data-type="เกาะ"
+                data-price="high"
+            >
+
+                <div class="tour-page-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1504512485720-7d83a16ee930?auto=format&fit=crop&w=900&q=80"
+                        alt="ภูเก็ต"
+                    >
+
+                    <span class="tour-page-tag">
+                        ใหม่
+                    </span>
+
+                    <button
+                        class="favorite-button"
+                        onclick="addFavorite(this)"
+                    >
+                        ♡
+                    </button>
+
+                </div>
+
+
+                <div class="tour-page-content">
+
+                    <p class="tour-page-location">
+                        🏝️ ภูเก็ต
+                    </p>
+
+                    <h3>
+                        ทัวร์ภูเก็ตและเกาะ
+                    </h3>
+
+                    <p class="tour-page-description">
+                        เที่ยวภูเก็ต
+                        พร้อมชมความสวยงาม
+                        ของหมู่เกาะโดยรอบ
+                    </p>
+
+                    <div class="tour-info">
+
+                        <span>
+                            📅 3 วัน 2 คืน
+                        </span>
+
+                        <span>
+                            👥 สูงสุด 15 คน
+                        </span>
+
+                    </div>
+
+                    <div class="tour-price-row">
+
+                        <div class="tour-price">
+                            ฿6,490
+                            <small>/คน</small>
+                        </div>
+
+                        <div class="tour-card-buttons">
+
+                            <a
+                                href="tour-detail.html"
+                                class="detail-button"
+                            >
+                                รายละเอียด
+                            </a>
+
+                            <a
+                                href="booking.html"
+                                class="book-button"
+                            >
+                                จอง
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- TOUR 4 -->
+
+            <article
+                class="tour-page-card"
+                data-destination="พังงา"
+                data-type="ธรรมชาติ"
+                data-price="medium"
+            >
+
+                <div class="tour-page-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&w=900&q=80"
+                        alt="พังงา"
+                    >
+
+                    <span class="tour-page-tag">
+                        ธรรมชาติ
+                    </span>
+
+                    <button
+                        class="favorite-button"
+                        onclick="addFavorite(this)"
+                    >
+                        ♡
+                    </button>
+
+                </div>
+
+
+                <div class="tour-page-content">
+
+                    <p class="tour-page-location">
+                        🌿 พังงา
+                    </p>
+
+                    <h3>
+                        ทัวร์พังงา
+                    </h3>
+
+                    <p class="tour-page-description">
+                        สัมผัสธรรมชาติ
+                        ภูเขา ทะเล
+                        และสถานที่ท่องเที่ยว
+                    </p>
+
+                    <div class="tour-info">
+
+                        <span>
+                            📅 2 วัน 1 คืน
+                        </span>
+
+                        <span>
+                            👥 สูงสุด 20 คน
+                        </span>
+
+                    </div>
+
+                    <div class="tour-price-row">
+
+                        <div class="tour-price">
+                            ฿3,490
+                            <small>/คน</small>
+                        </div>
+
+                        <div class="tour-card-buttons">
+
+                            <a
+                                href="tour-detail.html"
+                                class="detail-button"
+                            >
+                                รายละเอียด
+                            </a>
+
+                            <a
+                                href="booking.html"
+                                class="book-button"
+                            >
+                                จอง
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- TOUR 5 -->
+
+            <article
+                class="tour-page-card"
+                data-destination="สงขลา"
+                data-type="วัฒนธรรม"
+                data-price="low"
+            >
+
+                <div class="tour-page-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=80"
+                        alt="สงขลา"
+                    >
+
+                    <span class="tour-page-tag">
+                        ใกล้หาดใหญ่
+                    </span>
+
+                    <button
+                        class="favorite-button"
+                        onclick="addFavorite(this)"
+                    >
+                        ♡
+                    </button>
+
+                </div>
+
+
+                <div class="tour-page-content">
+
+                    <p class="tour-page-location">
+                        📍 สงขลา
+                    </p>
+
+                    <h3>
+                        ทัวร์เมืองเก่าสงขลา
+                    </h3>
+
+                    <p class="tour-page-description">
+                        ชมเมืองเก่า
+                        วิถีชุมชน
+                        อาหารและวัฒนธรรมท้องถิ่น
+                    </p>
+
+                    <div class="tour-info">
+
+                        <span>
+                            📅 1 วัน
+                        </span>
+
+                        <span>
+                            👥 สูงสุด 20 คน
+                        </span>
+
+                    </div>
+
+                    <div class="tour-price-row">
+
+                        <div class="tour-price">
+                            ฿1,290
+                            <small>/คน</small>
+                        </div>
+
+                        <div class="tour-card-buttons">
+
+                            <a
+                                href="tour-detail.html"
+                                class="detail-button"
+                            >
+                                รายละเอียด
+                            </a>
+
+                            <a
+                                href="booking.html"
+                                class="book-button"
+                            >
+                                จอง
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- TOUR 6 -->
+
+            <article
+                class="tour-page-card"
+                data-destination="กระบี่"
+                data-type="ธรรมชาติ"
+                data-price="low"
+            >
+
+                <div class="tour-page-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=900&q=80"
+                        alt="ธรรมชาติ"
+                    >
+
+                    <span class="tour-page-tag">
+                        ราคาประหยัด
+                    </span>
+
+                    <button
+                        class="favorite-button"
+                        onclick="addFavorite(this)"
+                    >
+                        ♡
+                    </button>
+
+                </div>
+
+
+                <div class="tour-page-content">
+
+                    <p class="tour-page-location">
+                        🌿 กระบี่
+                    </p>
+
+                    <h3>
+                        ทัวร์ธรรมชาติกระบี่
+                    </h3>
+
+                    <p class="tour-page-description">
+                        เที่ยวธรรมชาติ
+                        ชมภูเขา น้ำตก
+                        และจุดชมวิว
+                    </p>
+
+                    <div class="tour-info">
+
+                        <span>
+                            📅 1 วัน
+                        </span>
+
+                        <span>
+                            👥 สูงสุด 20 คน
+                        </span>
+
+                    </div>
+
+                    <div class="tour-price-row">
+
+                        <div class="tour-price">
+                            ฿1,890
+                            <small>/คน</small>
+                        </div>
+
+                        <div class="tour-card-buttons">
+
+                            <a
+                                href="tour-detail.html"
+                                class="detail-button"
+                            >
+                                รายละเอียด
+                            </a>
+
+                            <a
+                                href="booking.html"
+                                class="book-button"
+                            >
+                                จอง
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+
+        <div
+            class="empty-tour"
+            id="emptyTour"
+        >
+
+            <h3>
+                ไม่พบโปรแกรมทัวร์
+            </h3>
+
+            <p>
+                ลองเปลี่ยนเงื่อนไขการค้นหา
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="main-footer">
+
+        <div class="footer-container">
+
+
+            <div class="footer-about">
+
+                <div class="footer-logo">
+                    🌴 SK Travel&Tour Hatyai
+                </div>
+
+                <p>
+                    แพลตฟอร์มบริการท่องเที่ยว
+                    ที่ช่วยให้การค้นหา
+                    วางแผน และจองทริป
+                    เป็นเรื่องง่าย
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>เมนู</h3>
+
+                <a href="index.html">
+                    หน้าแรก
+                </a>
+
+                <a href="tours.html">
+                    แพ็กเกจทัวร์
+                </a>
+
+                <a href="recommend.html">
+                    แนะนำทัวร์
+                </a>
+
+                <a href="booking.html">
+                    จองทัวร์
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>สมาชิก</h3>
+
+                <a href="login.html">
+                    เข้าสู่ระบบ
+                </a>
+
+                <a href="register.html">
+                    สมัครสมาชิก
+                </a>
+
+                <a href="profile.html">
+                    โปรไฟล์
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>ติดต่อ</h3>
+
+                <p>
+                    📍 หาดใหญ่ จ.สงขลา
+                </p>
+
+                <p>
+                    📞 08X-XXX-XXXX
+                </p>
+
+                <p>
+                    💬 Line: @sktravel
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-bottom">
+
             © 2026 SK Travel&Tour Hatyai
-        </p>
+
+        </div>
 
     </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        function filterTours() {
+
+            const destination =
+                document.getElementById(
+                    "destinationFilter"
+                ).value;
+
+            const type =
+                document.getElementById(
+                    "typeFilter"
+                ).value;
+
+            const price =
+                document.getElementById(
+                    "priceFilter"
+                ).value;
+
+
+            const cards =
+                document.querySelectorAll(
+                    ".tour-page-card"
+                );
+
+
+            let count = 0;
+
+
+            cards.forEach(function(card) {
+
+                const cardDestination =
+                    card.dataset.destination;
+
+                const cardType =
+                    card.dataset.type;
+
+                const cardPrice =
+                    card.dataset.price;
+
+
+                const destinationMatch =
+                    destination === "" ||
+                    cardDestination === destination;
+
+                const typeMatch =
+                    type === "" ||
+                    cardType === type;
+
+                const priceMatch =
+                    price === "" ||
+                    cardPrice === price;
+
+
+                if (
+                    destinationMatch &&
+                    typeMatch &&
+                    priceMatch
+                ) {
+
+                    card.style.display = "";
+
+                    count++;
+
+                } else {
+
+                    card.style.display = "none";
+
+                }
+
+            });
+
+
+            document.getElementById(
+                "tourCount"
+            ).textContent =
+                "พบ " + count + " โปรแกรมทัวร์";
+
+
+            document.getElementById(
+                "emptyTour"
+            ).style.display =
+                count === 0
+                    ? "block"
+                    : "none";
+
+        }
+
+
+        function chooseCategory(category) {
+
+            document.getElementById(
+                "typeFilter"
+            ).value = category;
+
+            filterTours();
+
+            window.scrollTo({
+
+                top:
+                    document.querySelector(
+                        ".tour-list-section"
+                    ).offsetTop - 80,
+
+                behavior: "smooth"
+
+            });
+
+        }
+
+
+        function addFavorite(button) {
+
+            if (
+                button.textContent.trim() === "♡"
+            ) {
+
+                button.textContent = "♥";
+
+                button.style.color = "#087f5b";
+
+                alert(
+                    "เพิ่มทัวร์ลงในรายการโปรดแล้ว"
+                );
+
+            } else {
+
+                button.textContent = "♡";
+
+                button.style.color = "";
+
+                alert(
+                    "นำทัวร์ออกจากรายการโปรดแล้ว"
+                );
+
+            }
+
+        }
+
+    </script>
+
 
 </body>
 
