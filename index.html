@@ -2,92 +2,620 @@
 <html lang="th">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>SK Travel&Tour Hatyai</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    <title>
+        SK Travel&Tour Hatyai | ท่องเที่ยวภาคใต้
+    </title>
+
+    <meta
+        name="description"
+        content="SK Travel&Tour Hatyai บริการท่องเที่ยวและจองทัวร์ ค้นหาแพ็กเกจทัวร์และวางแผนการเดินทางได้ง่าย"
+    >
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
 </head>
+
 
 <body>
 
-    <!-- ================= HEADER ================= -->
 
-    <header class="header">
+    <!-- ==================================================
+         TOP BAR
+    ================================================== -->
 
-        <div class="logo">
-            🌴 SK Travel&Tour
+    <div class="top-bar">
+
+        <div class="top-bar-container">
+
+            <div>
+                📞 โทร: 08X-XXX-XXXX
+            </div>
+
+            <div>
+                💬 Line: @sktravel
+            </div>
+
         </div>
 
-        <nav class="menu">
+    </div>
 
-            <a href="index.html">
-                หน้าแรก
+
+    <!-- ==================================================
+         HEADER
+    ================================================== -->
+
+    <header class="main-header">
+
+        <div class="header-container">
+
+
+            <!-- LOGO -->
+
+            <a
+                href="index.html"
+                class="site-logo"
+            >
+
+                <span class="logo-icon">
+                    🌴
+                </span>
+
+                <div>
+
+                    <strong>
+                        SK Travel&Tour
+                    </strong>
+
+                    <small>
+                        HATYAI
+                    </small>
+
+                </div>
+
             </a>
 
-            <a href="tours.html">
-                แพ็กเกจทัวร์
+
+            <!-- MENU -->
+
+            <nav class="main-menu">
+
+                <a
+                    href="index.html"
+                    class="active"
+                >
+                    หน้าแรก
+                </a>
+
+                <a href="tours.html">
+                    แพ็กเกจทัวร์
+                </a>
+
+                <a href="recommend.html">
+                    🤖 แนะนำทัวร์
+                </a>
+
+                <a href="booking.html">
+                    จองทัวร์
+                </a>
+
+                <a href="about.html">
+                    เกี่ยวกับเรา
+                </a>
+
+                <a href="contact.html">
+                    ติดต่อเรา
+                </a>
+
+            </nav>
+
+
+            <!-- MEMBER -->
+
+            <a
+                href="login.html"
+                class="member-button"
+            >
+                👤 สมาชิก
             </a>
 
-            <a href="booking.html">
-                จองทัวร์
-            </a>
 
-            <a href="login.html">
-                เข้าสู่ระบบ
-            </a>
-
-        </nav>
+        </div>
 
     </header>
 
 
-    <!-- ================= HERO ================= -->
+    <!-- ==================================================
+         HERO
+    ================================================== -->
 
-    <section class="hero">
+    <section class="hero-home">
+
+
+        <div class="hero-overlay"></div>
+
 
         <div class="hero-content">
 
-            <p class="small-title">
+
+            <p class="hero-label">
                 SK TRAVEL&TOUR HATYAI
             </p>
 
+
             <h1>
-                เที่ยวสนุก<br>
-                <span>จองง่าย ได้ทุกที่</span>
+                เปิดประสบการณ์
+                <br>
+                <span>
+                    ท่องเที่ยวในแบบของคุณ
+                </span>
             </h1>
 
-            <p class="hero-text">
-                แพลตฟอร์มบริการท่องเที่ยว
-                ที่ช่วยให้คุณค้นหาแพ็กเกจทัวร์
-                และจองทริปท่องเที่ยวได้ง่าย
-                สะดวก และรวดเร็ว
+
+            <p class="hero-description">
+                ค้นหาแพ็กเกจทัวร์
+                วางแผนการเดินทาง
+                และจองทริปได้ง่าย
+                ในที่เดียว
             </p>
 
-            <div class="hero-buttons">
 
-                <a href="tours.html" class="btn primary tour-btn">
-                    🏝️ ดูแพ็กเกจทัวร์
-                </a>
+            <!-- SEARCH -->
 
-                <a href="booking.html" class="btn secondary booking-btn">
-                    📝 จองทัวร์
-                </a>
+            <div class="tour-search">
+
+
+                <div class="search-title">
+                    🔎 ค้นหาโปรแกรมทัวร์
+                </div>
+
+
+                <div class="search-form">
+
+
+                    <select id="searchDestination">
+
+                        <option value="">
+                            เลือกจุดหมายปลายทาง
+                        </option>
+
+                        <option value="lipe">
+                            เกาะหลีเป๊ะ
+                        </option>
+
+                        <option value="krabi">
+                            กระบี่
+                        </option>
+
+                        <option value="phuket">
+                            ภูเก็ต
+                        </option>
+
+                        <option value="phangnga">
+                            พังงา
+                        </option>
+
+                        <option value="songkhla">
+                            สงขลา
+                        </option>
+
+                    </select>
+
+
+                    <select id="searchType">
+
+                        <option value="">
+                            ประเภททัวร์
+                        </option>
+
+                        <option>
+                            ทัวร์ทะเล
+                        </option>
+
+                        <option>
+                            ทัวร์เกาะ
+                        </option>
+
+                        <option>
+                            ทัวร์ธรรมชาติ
+                        </option>
+
+                        <option>
+                            ทัวร์วัฒนธรรม
+                        </option>
+
+                    </select>
+
+
+                    <button
+                        type="button"
+                        onclick="searchTours()"
+                    >
+                        🔎 ค้นหาทัวร์
+                    </button>
+
+
+                </div>
 
             </div>
+
 
         </div>
 
     </section>
 
 
-    <!-- ================= SERVICES ================= -->
+    <!-- ==================================================
+         FEATURED TOURS
+    ================================================== -->
 
-    <section class="services">
+    <section class="home-section">
 
-        <div class="section-title">
+
+        <div class="section-heading">
+
+            <p>
+                FEATURED TOURS
+            </p>
+
+            <h2>
+                โปรแกรมทัวร์แนะนำ
+            </h2>
+
+            <span>
+                เลือกโปรแกรมท่องเที่ยวที่เหมาะกับคุณ
+            </span>
+
+        </div>
+
+
+        <div class="tour-grid">
+
+
+            <!-- TOUR 1 -->
+
+            <article class="tour-card">
+
+                <div class="tour-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80"
+                        alt="ทัวร์ทะเล"
+                    >
+
+                    <span class="tour-tag">
+                        แนะนำ
+                    </span>
+
+                </div>
+
+
+                <div class="tour-content">
+
+                    <p class="tour-location">
+                        🏝️ ภาคใต้
+                    </p>
+
+                    <h3>
+                        ทัวร์ทะเลใต้
+                    </h3>
+
+                    <p>
+                        เที่ยวทะเลและพักผ่อน
+                        พร้อมกิจกรรมทางทะเล
+                    </p>
+
+
+                    <div class="tour-bottom">
+
+                        <strong>
+                            เริ่มต้น ฿2,xxx
+                        </strong>
+
+                        <a href="tour-detail.html">
+                            ดูรายละเอียด →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- TOUR 2 -->
+
+            <article class="tour-card">
+
+                <div class="tour-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=900&q=80"
+                        alt="เกาะหลีเป๊ะ"
+                    >
+
+                    <span class="tour-tag">
+                        ยอดนิยม
+                    </span>
+
+                </div>
+
+
+                <div class="tour-content">
+
+                    <p class="tour-location">
+                        🏝️ สตูล
+                    </p>
+
+                    <h3>
+                        ทัวร์เกาะหลีเป๊ะ
+                    </h3>
+
+                    <p>
+                        สัมผัสทะเลใส
+                        หาดทรายสวย
+                        และหมู่เกาะอันดามัน
+                    </p>
+
+
+                    <div class="tour-bottom">
+
+                        <strong>
+                            เริ่มต้น ฿2,xxx
+                        </strong>
+
+                        <a href="tour-detail.html">
+                            ดูรายละเอียด →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- TOUR 3 -->
+
+            <article class="tour-card">
+
+                <div class="tour-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&w=900&q=80"
+                        alt="ทัวร์ธรรมชาติ"
+                    >
+
+                    <span class="tour-tag">
+                        ใหม่
+                    </span>
+
+                </div>
+
+
+                <div class="tour-content">
+
+                    <p class="tour-location">
+                        🌿 ภาคใต้
+                    </p>
+
+                    <h3>
+                        ทัวร์ธรรมชาติ
+                    </h3>
+
+                    <p>
+                        สัมผัสธรรมชาติ
+                        น้ำตก ภูเขา
+                        และสถานที่ท่องเที่ยว
+                    </p>
+
+
+                    <div class="tour-bottom">
+
+                        <strong>
+                            เริ่มต้น ฿1,xxx
+                        </strong>
+
+                        <a href="tour-detail.html">
+                            ดูรายละเอียด →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+
+        <div class="section-button">
+
+            <a
+                href="tours.html"
+                class="outline-button"
+            >
+                ดูแพ็กเกจทัวร์ทั้งหมด
+            </a>
+
+        </div>
+
+
+    </section>
+
+
+    <!-- ==================================================
+         POPULAR DESTINATIONS
+    ================================================== -->
+
+    <section class="destination-section">
+
+
+        <div class="section-heading">
+
+            <p>
+                POPULAR DESTINATIONS
+            </p>
+
+            <h2>
+                จุดหมายปลายทางยอดนิยม
+            </h2>
+
+            <span>
+                เลือกเส้นทางที่คุณอยากออกเดินทาง
+            </span>
+
+        </div>
+
+
+        <div class="destination-grid">
+
+
+            <a
+                href="tours.html"
+                class="destination-card large"
+            >
+
+                <img
+                    src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1200&q=80"
+                    alt="ทะเลใต้"
+                >
+
+                <div class="destination-overlay">
+
+                    <h3>
+                        ทะเลใต้
+                    </h3>
+
+                    <span>
+                        ดูแพ็กเกจ →
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <a
+                href="tours.html"
+                class="destination-card"
+            >
+
+                <img
+                    src="https://images.unsplash.com/photo-1504512485720-7d83a16ee930?auto=format&fit=crop&w=900&q=80"
+                    alt="เกาะ"
+                >
+
+                <div class="destination-overlay">
+
+                    <h3>
+                        เกาะและชายหาด
+                    </h3>
+
+                    <span>
+                        ดูแพ็กเกจ →
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <a
+                href="tours.html"
+                class="destination-card"
+            >
+
+                <img
+                    src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=900&q=80"
+                    alt="ธรรมชาติ"
+                >
+
+                <div class="destination-overlay">
+
+                    <h3>
+                        ธรรมชาติ
+                    </h3>
+
+                    <span>
+                        ดูแพ็กเกจ →
+                    </span>
+
+                </div>
+
+            </a>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         SMART RECOMMENDATION
+    ================================================== -->
+
+    <section class="recommend-section">
+
+
+        <div class="recommend-content">
+
+
+            <div>
+
+                <p class="section-label">
+                    SMART TRAVEL
+                </p>
+
+                <h2>
+                    ไม่รู้จะไปไหนดี?
+                </h2>
+
+                <p>
+                    ให้เราช่วยค้นหาทัวร์
+                    ที่เหมาะกับสไตล์การเดินทางของคุณ
+                    เพียงตอบคำถามสั้น ๆ
+                </p>
+
+                <a
+                    href="recommend.html"
+                    class="primary-button"
+                >
+                    🤖 ให้ระบบแนะนำทัวร์
+                </a>
+
+            </div>
+
+
+            <div class="recommend-icon">
+                🤖
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         SERVICES
+    ================================================== -->
+
+    <section class="home-section">
+
+
+        <div class="section-heading">
 
             <p>
                 OUR SERVICES
@@ -100,14 +628,12 @@
         </div>
 
 
-        <div class="service-container">
+        <div class="service-grid">
 
 
-            <!-- CARD 1 -->
+            <div class="service-item">
 
-            <div class="service-card">
-
-                <div class="icon">
+                <div class="service-icon">
                     🏝️
                 </div>
 
@@ -116,18 +642,17 @@
                 </h3>
 
                 <p>
-                    ค้นหาและเลือกแพ็กเกจทัวร์
-                    ที่เหมาะกับการเดินทางของคุณ
+                    เลือกโปรแกรมทัวร์
+                    ตามจุดหมายและรูปแบบ
+                    การเดินทางที่ต้องการ
                 </p>
 
             </div>
 
 
-            <!-- CARD 2 -->
+            <div class="service-item">
 
-            <div class="service-card">
-
-                <div class="icon">
+                <div class="service-icon">
                     📝
                 </div>
 
@@ -136,139 +661,405 @@
                 </h3>
 
                 <p>
-                    จองทัวร์ได้ง่าย
-                    ผ่านระบบออนไลน์
-                    โดยไม่ต้องเสียเวลาเดินทาง
+                    จองทัวร์ได้สะดวก
+                    พร้อมตรวจสอบข้อมูล
+                    การจองของคุณ
                 </p>
 
             </div>
 
 
-            <!-- CARD 3 -->
+            <div class="service-item">
 
-            <div class="service-card">
-
-                <div class="icon">
-                    📱
+                <div class="service-icon">
+                    🤖
                 </div>
 
                 <h3>
-                    ติดต่อออนไลน์
+                    แนะนำทัวร์
                 </h3>
 
                 <p>
-                    ติดต่อสอบถามข้อมูล
-                    และบริการต่าง ๆ
-                    ได้อย่างสะดวก
+                    ช่วยค้นหาโปรแกรม
+                    ที่เหมาะกับความสนใจ
+                    และงบประมาณ
                 </p>
 
             </div>
 
 
-            <!-- CARD 4 -->
+            <div class="service-item">
 
-            <div class="service-card">
-
-                <div class="icon">
-                    🧳
+                <div class="service-icon">
+                    📞
                 </div>
 
                 <h3>
-                    วางแผนการเดินทาง
+                    ติดต่อเรา
                 </h3>
 
                 <p>
-                    ช่วยวางแผนการท่องเที่ยว
-                    ให้เหมาะกับความต้องการ
-                    ของคุณ
+                    สอบถามข้อมูล
+                    และรายละเอียดการเดินทาง
+                    ได้โดยตรง
                 </p>
 
             </div>
+
 
         </div>
 
     </section>
 
 
-    <!-- ================= ABOUT ================= -->
+    <!-- ==================================================
+         WHY US
+    ================================================== -->
 
-    <section class="about">
+    <section class="why-section">
 
-        <div class="about-content">
 
-            <div class="about-text">
+        <div class="why-container">
 
-                <p class="small-title">
-                    ABOUT US
+
+            <div class="why-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=1200&q=80"
+                    alt="การเดินทางท่องเที่ยว"
+                >
+
+            </div>
+
+
+            <div class="why-content">
+
+                <p class="section-label">
+                    WHY SK TRAVEL&TOUR
                 </p>
 
                 <h2>
-                    SK Travel&Tour Hatyai
+                    วางแผนง่าย
+                    <br>
+                    เดินทางอย่างสบายใจ
                 </h2>
 
                 <p>
-                    SK Travel&Tour Hatyai
-                    เป็นแพลตฟอร์มบริการท่องเที่ยว
-                    ที่ช่วยให้นักท่องเที่ยวสามารถ
-                    ค้นหาแพ็กเกจทัวร์และจองบริการ
-                    ท่องเที่ยวได้ง่ายขึ้น
+                    เราต้องการช่วยลดความยุ่งยาก
+                    ในการค้นหาและวางแผนการเดินทาง
+                    ให้คุณสามารถเลือกทัวร์
+                    และจองบริการได้ง่ายในที่เดียว
                 </p>
 
+
+                <ul>
+
+                    <li>
+                        ✓ ค้นหาแพ็กเกจได้ง่าย
+                    </li>
+
+                    <li>
+                        ✓ มีข้อมูลทัวร์ให้เลือก
+                    </li>
+
+                    <li>
+                        ✓ จองทัวร์ออนไลน์
+                    </li>
+
+                    <li>
+                        ✓ มีระบบแนะนำทัวร์
+                    </li>
+
+                </ul>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         REVIEWS
+    ================================================== -->
+
+    <section class="home-section">
+
+
+        <div class="section-heading">
+
+            <p>
+                CUSTOMER REVIEWS
+            </p>
+
+            <h2>
+                ความประทับใจจากลูกค้า
+            </h2>
+
+        </div>
+
+
+        <div class="review-grid">
+
+
+            <div class="review-card">
+
+                <div class="review-stars">
+                    ⭐⭐⭐⭐⭐
+                </div>
+
                 <p>
-                    เรามุ่งเน้นการนำเทคโนโลยี
-                    มาช่วยลดความยุ่งยากในการวางแผน
-                    และการจองทริปท่องเที่ยว
+                    “จองทัวร์ง่าย
+                    ข้อมูลเข้าใจง่าย
+                    และสะดวกมาก”
+                </p>
+
+                <strong>
+                    ลูกค้า SK Travel&Tour
+                </strong>
+
+            </div>
+
+
+            <div class="review-card">
+
+                <div class="review-stars">
+                    ⭐⭐⭐⭐⭐
+                </div>
+
+                <p>
+                    “ชอบระบบแนะนำทัวร์
+                    ช่วยให้เลือกโปรแกรม
+                    ได้ง่ายขึ้น”
+                </p>
+
+                <strong>
+                    ลูกค้า SK Travel&Tour
+                </strong>
+
+            </div>
+
+
+            <div class="review-card">
+
+                <div class="review-stars">
+                    ⭐⭐⭐⭐⭐
+                </div>
+
+                <p>
+                    “เหมาะสำหรับคนที่
+                    ไม่รู้ว่าจะวางแผนเที่ยว
+                    อย่างไร”
+                </p>
+
+                <strong>
+                    ลูกค้า SK Travel&Tour
+                </strong>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+    <!-- ==================================================
+         CTA
+    ================================================== -->
+
+    <section class="home-cta">
+
+        <div>
+
+            <h2>
+                พร้อมออกเดินทางแล้วหรือยัง?
+            </h2>
+
+            <p>
+                ค้นหาแพ็กเกจทัวร์
+                แล้วเริ่มต้นการเดินทางของคุณ
+            </p>
+
+        </div>
+
+
+        <div class="cta-buttons">
+
+            <a
+                href="tours.html"
+                class="primary-button"
+            >
+                🏝️ ดูแพ็กเกจทัวร์
+            </a>
+
+            <a
+                href="booking.html"
+                class="white-button"
+            >
+                📝 จองทัวร์
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         FOOTER
+    ================================================== -->
+
+    <footer class="main-footer">
+
+
+        <div class="footer-container">
+
+
+            <div class="footer-about">
+
+                <div class="footer-logo">
+                    🌴 SK Travel&Tour Hatyai
+                </div>
+
+                <p>
+                    แพลตฟอร์มบริการท่องเที่ยว
+                    ที่ช่วยให้การค้นหา
+                    วางแผน และจองทริป
+                    เป็นเรื่องง่าย
                 </p>
 
             </div>
 
+
+            <div class="footer-column">
+
+                <h3>
+                    เมนู
+                </h3>
+
+                <a href="index.html">
+                    หน้าแรก
+                </a>
+
+                <a href="tours.html">
+                    แพ็กเกจทัวร์
+                </a>
+
+                <a href="recommend.html">
+                    แนะนำทัวร์
+                </a>
+
+                <a href="booking.html">
+                    จองทัวร์
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    สมาชิก
+                </h3>
+
+                <a href="login.html">
+                    เข้าสู่ระบบ
+                </a>
+
+                <a href="register.html">
+                    สมัครสมาชิก
+                </a>
+
+                <a href="profile.html">
+                    โปรไฟล์
+                </a>
+
+                <a href="my-bookings.html">
+                    รายการจอง
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    ติดต่อ
+                </h3>
+
+                <p>
+                    📍 หาดใหญ่ จ.สงขลา
+                </p>
+
+                <p>
+                    📞 08X-XXX-XXXX
+                </p>
+
+                <p>
+                    💬 Line: @sktravel
+                </p>
+
+            </div>
+
+
         </div>
 
-    </section>
 
+        <div class="footer-bottom">
 
-    <!-- ================= CTA ================= -->
-
-    <section class="cta">
-
-        <h2>
-            พร้อมออกเดินทางไปกับเราหรือยัง?
-        </h2>
-
-        <p>
-            เลือกแพ็กเกจทัวร์ที่คุณสนใจ
-            แล้วเริ่มต้นการเดินทางของคุณ
-        </p>
-
-        <a href="tours.html" class="btn primary tour-btn">
-            🏝️ เริ่มค้นหาทัวร์
-        </a>
-
-    </section>
-
-
-    <!-- ================= FOOTER ================= -->
-
-    <footer class="footer">
-
-        <div class="footer-logo">
-            🌴 SK Travel&Tour Hatyai
-        </div>
-
-        <p>
-            บริการท่องเที่ยวและจองทัวร์
-        </p>
-
-        <p class="copyright">
             © 2026 SK Travel&Tour Hatyai
-        </p>
+
+        </div>
+
 
     </footer>
 
 
-    <!-- JavaScript -->
+    <!-- ==================================================
+         JAVASCRIPT
+    ================================================== -->
 
     <script src="script.js"></script>
+
+
+    <script>
+
+        function searchTours() {
+
+            const destination =
+                document.getElementById(
+                    "searchDestination"
+                ).value;
+
+            const type =
+                document.getElementById(
+                    "searchType"
+                ).value;
+
+
+            if (
+                destination === "" &&
+                type === ""
+            ) {
+
+                window.location.href =
+                    "tours.html";
+
+                return;
+
+            }
+
+
+            window.location.href =
+                "tours.html";
+
+        }
+
+    </script>
+
 
 </body>
 
