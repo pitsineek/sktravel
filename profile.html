@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>โปรไฟล์ | SK Travel&Tour Hatyai</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="logo">
+            🌴 SK Travel&Tour Hatyai
+        </div>
+
+        <nav class="menu">
+
+            <a href="index.html">
+                หน้าแรก
+            </a>
+
+            <a href="tours.html">
+                แพ็กเกจทัวร์
+            </a>
+
+            <a href="recommend.html">
+                🤖 แนะนำทัวร์
+            </a>
+
+            <a href="booking.html">
+                จองทัวร์
+            </a>
+
+            <a href="profile.html">
+                👤 สมาชิก
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= PROFILE ================= -->
+
+    <main class="profile-page">
+
+        <div class="profile-container">
+
+
+            <!-- ================= TITLE ================= -->
+
+            <div class="profile-title">
+
+                <p>
+                    MY ACCOUNT
+                </p>
+
+                <h1>
+                    โปรไฟล์ของฉัน
+                </h1>
+
+                <span>
+                    จัดการข้อมูลส่วนตัวและข้อมูลการเดินทาง
+                </span>
+
+            </div>
+
+
+            <!-- ================= PROFILE CARD ================= -->
+
+            <div class="profile-card">
+
+
+                <!-- PROFILE HEADER -->
+
+                <div class="profile-header">
+
+                    <div class="profile-avatar">
+                        👤
+                    </div>
+
+                    <div class="profile-name">
+
+                        <h2>
+                            ชื่อสมาชิก
+                        </h2>
+
+                        <p>
+                            สมาชิก SK Travel&Tour Hatyai
+                        </p>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        class="edit-profile-btn"
+                        onclick="enableEdit()"
+                    >
+                        ✏️ แก้ไขข้อมูล
+                    </button>
+
+                </div>
+
+
+                <!-- ================= INFORMATION ================= -->
+
+                <div class="profile-information">
+
+                    <h3>
+                        ข้อมูลส่วนตัว
+                    </h3>
+
+
+                    <div class="profile-grid">
+
+
+                        <!-- NAME -->
+
+                        <div class="profile-field">
+
+                            <label>
+                                ชื่อ-นามสกุล
+                            </label>
+
+                            <input
+                                type="text"
+                                id="fullname"
+                                value="ชื่อสมาชิก"
+                                disabled
+                            >
+
+                        </div>
+
+
+                        <!-- PHONE -->
+
+                        <div class="profile-field">
+
+                            <label>
+                                เบอร์โทรศัพท์
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                value="08X-XXX-XXXX"
+                                disabled
+                            >
+
+                        </div>
+
+
+                        <!-- EMAIL -->
+
+                        <div class="profile-field">
+
+                            <label>
+                                อีเมล
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                value="example@email.com"
+                                disabled
+                            >
+
+                        </div>
+
+
+                        <!-- ADDRESS -->
+
+                        <div class="profile-field">
+
+                            <label>
+                                จังหวัด
+                            </label>
+
+                            <input
+                                type="text"
+                                id="province"
+                                value="สงขลา"
+                                disabled
+                            >
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================= TRAVEL INFORMATION ================= -->
+
+                <div class="profile-information">
+
+                    <h3>
+                        ข้อมูลการท่องเที่ยว
+                    </h3>
+
+
+                    <div class="profile-grid">
+
+
+                        <!-- FAVORITE -->
+
+                        <div class="profile-field">
+
+                            <label>
+                                ประเภททัวร์ที่สนใจ
+                            </label>
+
+                            <select
+                                id="favoriteTour"
+                                disabled
+                            >
+
+                                <option>
+                                    ทะเลและเกาะ
+                                </option>
+
+                                <option>
+                                    ธรรมชาติ
+                                </option>
+
+                                <option>
+                                    วัฒนธรรม
+                                </option>
+
+                                <option>
+                                    ผจญภัย
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- TRAVEL STYLE -->
+
+                        <div class="profile-field">
+
+                            <label>
+                                รูปแบบการเดินทาง
+                            </label>
+
+                            <select
+                                id="travelStyle"
+                                disabled
+                            >
+
+                                <option>
+                                    เดินทางกับครอบครัว
+                                </option>
+
+                                <option>
+                                    เดินทางคนเดียว
+                                </option>
+
+                                <option>
+                                    เดินทางกับเพื่อน
+                                </option>
+
+                                <option>
+                                    คู่รัก
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- BUDGET -->
+
+                        <div class="profile-field">
+
+                            <label>
+                                งบประมาณต่อทริป
+                            </label>
+
+                            <select
+                                id="budget"
+                                disabled
+                            >
+
+                                <option>
+                                    ต่ำกว่า 2,000 บาท
+                                </option>
+
+                                <option>
+                                    2,000 - 5,000 บาท
+                                </option>
+
+                                <option>
+                                    5,000 - 10,000 บาท
+                                </option>
+
+                                <option>
+                                    มากกว่า 10,000 บาท
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- TRAVELERS -->
+
+                        <div class="profile-field">
+
+                            <label>
+                                จำนวนผู้เดินทางโดยปกติ
+                            </label>
+
+                            <select
+                                id="travelers"
+                                disabled
+                            >
+
+                                <option>
+                                    1 คน
+                                </option>
+
+                                <option>
+                                    2 คน
+                                </option>
+
+                                <option>
+                                    3 - 5 คน
+                                </option>
+
+                                <option>
+                                    มากกว่า 5 คน
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================= SAVE ================= -->
+
+                <div
+                    class="profile-actions"
+                    id="profileActions"
+                    style="display: none;"
+                >
+
+                    <button
+                        type="button"
+                        class="save-profile-btn"
+                        onclick="saveProfile()"
+                    >
+                        💾 บันทึกข้อมูล
+                    </button>
+
+                    <button
+                        type="button"
+                        class="cancel-profile-btn"
+                        onclick="cancelEdit()"
+                    >
+                        ยกเลิก
+                    </button>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- ================= QUICK MENU ================= -->
+
+            <div class="profile-menu">
+
+                <a href="my-bookings.html">
+
+                    <div class="profile-menu-icon">
+                        📋
+                    </div>
+
+                    <div>
+                        <strong>
+                            รายการจองของฉัน
+                        </strong>
+
+                        <span>
+                            ดูประวัติและสถานะการจอง
+                        </span>
+                    </div>
+
+                </a>
+
+
+                <a href="favorites.html">
+
+                    <div class="profile-menu-icon">
+                        ❤️
+                    </div>
+
+                    <div>
+                        <strong>
+                            รายการโปรด
+                        </strong>
+
+                        <span>
+                            ดูทัวร์ที่บันทึกไว้
+                        </span>
+                    </div>
+
+                </a>
+
+
+                <a href="reviews.html">
+
+                    <div class="profile-menu-icon">
+                        ⭐
+                    </div>
+
+                    <div>
+                        <strong>
+                            รีวิวของฉัน
+                        </strong>
+
+                        <span>
+                            ดูและจัดการรีวิวทัวร์
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+                <a href="logout.html">
+
+                    <div class="profile-menu-icon">
+                        🚪
+                    </div>
+
+                    <div>
+                        <strong>
+                            ออกจากระบบ
+                        </strong>
+
+                        <span>
+                            ออกจากบัญชีผู้ใช้งาน
+                        </span>
+                    </div>
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-logo">
+            🌴 SK Travel&Tour Hatyai
+        </div>
+
+        <p>
+            บริการท่องเที่ยวและจองทัวร์
+        </p>
+
+        <p class="copyright">
+            © 2026 SK Travel&Tour Hatyai
+        </p>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        function enableEdit() {
+
+            const fields = document.querySelectorAll(
+                ".profile-field input, .profile-field select"
+            );
+
+            fields.forEach(function(field) {
+
+                field.disabled = false;
+
+            });
+
+
+            document.getElementById(
+                "profileActions"
+            ).style.display = "flex";
+
+        }
+
+
+        function saveProfile() {
+
+            const fields = document.querySelectorAll(
+                ".profile-field input, .profile-field select"
+            );
+
+            fields.forEach(function(field) {
+
+                field.disabled = true;
+
+            });
+
+
+            document.getElementById(
+                "profileActions"
+            ).style.display = "none";
+
+
+            alert("บันทึกข้อมูลเรียบร้อยแล้ว");
+
+        }
+
+
+        function cancelEdit() {
+
+            const fields = document.querySelectorAll(
+                ".profile-field input, .profile-field select"
+            );
+
+            fields.forEach(function(field) {
+
+                field.disabled = true;
+
+            });
+
+
+            document.getElementById(
+                "profileActions"
+            ).style.display = "none";
+
+        }
+
+    </script>
+
+</body>
+
+</html>
