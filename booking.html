@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>จองทัวร์ | SK Travel&Tour Hatyai</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <div class="logo">
+            🌴 SK Travel&Tour
+        </div>
+
+        <nav class="menu">
+
+            <a href="index.html">
+                หน้าแรก
+            </a>
+
+            <a href="tours.html">
+                แพ็กเกจทัวร์
+            </a>
+
+            <a href="booking.html">
+                จองทัวร์
+            </a>
+
+            <a href="login.html">
+                เข้าสู่ระบบ
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- BOOKING -->
+
+    <section class="services">
+
+        <div class="section-title">
+
+            <p>
+                TOUR BOOKING
+            </p>
+
+            <h2>
+                จองทัวร์
+            </h2>
+
+            <p>
+                กรอกข้อมูลสำหรับการจองทัวร์
+            </p>
+
+        </div>
+
+
+        <div class="booking-container">
+
+            <form class="booking-form">
+
+                <!-- ชื่อ -->
+
+                <label>
+                    ชื่อ-นามสกุล
+                </label>
+
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="กรอกชื่อ-นามสกุล"
+                    required
+                >
+
+
+                <!-- เบอร์โทร -->
+
+                <label>
+                    เบอร์โทรศัพท์
+                </label>
+
+                <input
+                    type="tel"
+                    name="phone"
+                    placeholder="กรอกเบอร์โทรศัพท์"
+                    required
+                >
+
+
+                <!-- อีเมล -->
+
+                <label>
+                    อีเมล
+                </label>
+
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="example@email.com"
+                    required
+                >
+
+
+                <!-- เลือกทัวร์ -->
+
+                <label>
+                    เลือกแพ็กเกจทัวร์
+                </label>
+
+                <select name="tour" required>
+
+                    <option value="">
+                        -- เลือกแพ็กเกจทัวร์ --
+                    </option>
+
+                    <option value="sea">
+                        ทัวร์ทะเล
+                    </option>
+
+                    <option value="island">
+                        ทัวร์เกาะ
+                    </option>
+
+                    <option value="nature">
+                        ทัวร์ธรรมชาติ
+                    </option>
+
+                </select>
+
+
+                <!-- วันที่ -->
+
+                <label>
+                    วันที่ต้องการเดินทาง
+                </label>
+
+                <input
+                    type="date"
+                    name="date"
+                    required
+                >
+
+
+                <!-- จำนวนคน -->
+
+                <label>
+                    จำนวนผู้เดินทาง
+                </label>
+
+                <input
+                    type="number"
+                    name="people"
+                    min="1"
+                    value="1"
+                    required
+                >
+
+
+                <!-- ข้อความเพิ่มเติม -->
+
+                <label>
+                    รายละเอียดเพิ่มเติม
+                </label>
+
+                <textarea
+                    name="message"
+                    rows="5"
+                    placeholder="ระบุรายละเอียดเพิ่มเติม เช่น ความต้องการพิเศษ"
+                ></textarea>
+
+
+                <!-- ปุ่ม -->
+
+                <button
+                    type="submit"
+                    class="btn primary"
+                >
+                    📝 ยืนยันการจอง
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="footer-logo">
+            🌴 SK Travel&Tour Hatyai
+        </div>
+
+        <p>
+            บริการท่องเที่ยวและจองทัวร์
+        </p>
+
+        <p class="copyright">
+            © 2026 SK Travel&Tour Hatyai
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
