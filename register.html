@@ -17,7 +17,7 @@
     <header class="header">
 
         <div class="logo">
-            🌴 SK Travel&Tour
+            🌴 SK Travel&Tour Hatyai
         </div>
 
         <nav class="menu">
@@ -34,10 +34,6 @@
                 จองทัวร์
             </a>
 
-            <a href="login.html">
-                เข้าสู่ระบบ
-            </a>
-
         </nav>
 
     </header>
@@ -45,176 +41,256 @@
 
     <!-- ================= REGISTER ================= -->
 
-    <section class="login-section">
+    <main class="auth-page">
 
-        <div class="login-box">
-
-            <div class="login-icon">
-                📝
-            </div>
-
-            <h1>
-                สมัครสมาชิก
-            </h1>
-
-            <p class="login-description">
-                สร้างบัญชี SK Travel&Tour Hatyai
-            </p>
+        <div class="auth-container">
 
 
-            <!-- REGISTER FORM -->
+            <!-- LEFT SIDE -->
 
-            <form class="login-form">
+            <div class="auth-info">
 
-                <!-- NAME -->
+                <div class="auth-logo">
+                    🌴
+                </div>
 
-                <label for="fullname">
-                    ชื่อ-นามสกุล
-                </label>
-
-                <input
-                    type="text"
-                    id="fullname"
-                    name="fullname"
-                    placeholder="กรอกชื่อ-นามสกุล"
-                    required
-                >
-
-
-                <!-- PHONE -->
-
-                <label for="phone">
-                    เบอร์โทรศัพท์
-                </label>
-
-                <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    placeholder="กรอกเบอร์โทรศัพท์"
-                    required
-                >
-
-
-                <!-- EMAIL -->
-
-                <label for="email">
-                    อีเมล
-                </label>
-
-                <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="กรอกอีเมล"
-                    required
-                >
-
-
-                <!-- PASSWORD -->
-
-                <label for="password">
-                    รหัสผ่าน
-                </label>
-
-                <input
-                    type="password"
-                    id="password"
-                    name="password"
-                    placeholder="กรอกรหัสผ่าน"
-                    required
-                >
-
-
-                <!-- CONFIRM PASSWORD -->
-
-                <label for="confirm-password">
-                    ยืนยันรหัสผ่าน
-                </label>
-
-                <input
-                    type="password"
-                    id="confirm-password"
-                    name="confirm-password"
-                    placeholder="กรอกรหัสผ่านอีกครั้ง"
-                    required
-                >
-
-
-                <!-- TERMS -->
-
-                <label class="remember">
-
-                    <input
-                        type="checkbox"
-                        name="terms"
-                        required
-                    >
-
-                    ยอมรับเงื่อนไขการใช้งาน
-
-                </label>
-
-
-                <!-- BUTTON -->
-
-                <button
-                    type="submit"
-                    class="btn primary login-button"
-                >
-                    📝 สมัครสมาชิก
-                </button>
-
-            </form>
-
-
-            <!-- LOGIN -->
-
-            <div class="register-link">
+                <h1>
+                    SK Travel&Tour
+                </h1>
 
                 <p>
-                    มีบัญชีอยู่แล้ว?
+                    เริ่มต้นการเดินทาง
+                    <br>
+                    ไปกับเรา
+                </p>
+
+                <span>
+                    จองทัวร์ง่าย
+                    สะดวก
+                    และรวดเร็ว
+                </span>
+
+            </div>
+
+
+            <!-- RIGHT SIDE -->
+
+            <div class="auth-form-box">
+
+                <h2>
+                    สร้างบัญชีผู้ใช้งาน
+                </h2>
+
+                <p class="auth-subtitle">
+                    สมัครสมาชิกเพื่อเริ่มต้นการจองทัวร์
+                </p>
+
+
+                <form id="registerForm">
+
+
+                    <!-- ชื่อ -->
+
+                    <div class="form-group">
+
+                        <label for="fullname">
+                            ชื่อ-นามสกุล
+                        </label>
+
+                        <input
+                            type="text"
+                            id="fullname"
+                            name="fullname"
+                            placeholder="กรอกชื่อ-นามสกุล"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- เบอร์โทร -->
+
+                    <div class="form-group">
+
+                        <label for="phone">
+                            เบอร์โทรศัพท์
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="กรอกเบอร์โทรศัพท์"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- EMAIL -->
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            อีเมล
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="example@email.com"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- PASSWORD -->
+
+                    <div class="form-group">
+
+                        <label for="password">
+                            รหัสผ่าน
+                        </label>
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="กรอกรหัสผ่าน"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- CONFIRM PASSWORD -->
+
+                    <div class="form-group">
+
+                        <label for="confirmPassword">
+                            ยืนยันรหัสผ่าน
+                        </label>
+
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            name="confirmPassword"
+                            placeholder="กรอกรหัสผ่านอีกครั้ง"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- TERMS -->
+
+                    <div class="terms">
+
+                        <label>
+
+                            <input
+                                type="checkbox"
+                                id="terms"
+                                required
+                            >
+
+                            ยอมรับเงื่อนไขการใช้งาน
+                            และนโยบายความเป็นส่วนตัว
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- BUTTON -->
+
+                    <button
+                        type="submit"
+                        class="auth-button"
+                    >
+                        สมัครสมาชิก
+                    </button>
+
+
+                </form>
+
+
+                <!-- LOGIN -->
+
+                <div class="auth-bottom">
+
+                    <p>
+                        มีบัญชีอยู่แล้ว?
+                    </p>
 
                     <a href="login.html">
                         เข้าสู่ระบบ
                     </a>
-                </p>
+
+                </div>
+
+
+                <!-- HOME -->
+
+                <a
+                    href="index.html"
+                    class="auth-home"
+                >
+                    ← กลับหน้าแรก
+                </a>
 
             </div>
 
-
-            <!-- BACK HOME -->
-
-            <a
-                href="index.html"
-                class="back-home"
-            >
-                ← กลับหน้าแรก
-            </a>
-
         </div>
 
-    </section>
+    </main>
 
 
     <!-- ================= FOOTER ================= -->
 
     <footer class="footer">
 
-        <div class="footer-logo">
-            🌴 SK Travel&Tour Hatyai
-        </div>
-
         <p>
-            บริการท่องเที่ยวและจองทัวร์
-        </p>
-
-        <p class="copyright">
             © 2026 SK Travel&Tour Hatyai
         </p>
 
     </footer>
 
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        const registerForm =
+            document.getElementById("registerForm");
+
+        registerForm.addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            const password =
+                document.getElementById("password").value;
+
+            const confirmPassword =
+                document.getElementById("confirmPassword").value;
+
+
+            if (password !== confirmPassword) {
+
+                alert("รหัสผ่านไม่ตรงกัน");
+
+                return;
+
+            }
+
+
+            alert("สมัครสมาชิกสำเร็จ");
+
+        });
+
+    </script>
 
 </body>
 
