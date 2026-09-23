@@ -1,0 +1,1445 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        ทัวร์เกาะหลีเป๊ะ | SK Travel&Tour Hatyai
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+    <style>
+
+        /* =========================================
+           TOUR DETAIL
+        ========================================= */
+
+        .detail-hero {
+
+            background: #f5f9f8;
+
+            padding: 35px 20px 60px;
+
+        }
+
+        .detail-container {
+
+            max-width: 1200px;
+
+            margin: auto;
+
+        }
+
+        .breadcrumb {
+
+            color: #777;
+
+            font-size: 13px;
+
+            margin-bottom: 25px;
+
+        }
+
+        .breadcrumb a {
+
+            color: #087f5b;
+
+        }
+
+
+        /* MAIN */
+
+        .detail-main {
+
+            display: grid;
+
+            grid-template-columns:
+                1.2fr 1fr;
+
+            gap: 40px;
+
+            align-items: start;
+
+        }
+
+
+        /* IMAGE */
+
+        .detail-image {
+
+            height: 470px;
+
+            overflow: hidden;
+
+            border-radius: 18px;
+
+            position: relative;
+
+        }
+
+        .detail-image img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+        }
+
+        .detail-tag {
+
+            position: absolute;
+
+            top: 20px;
+
+            left: 20px;
+
+            background: #087f5b;
+
+            color: white;
+
+            padding: 7px 14px;
+
+            border-radius: 6px;
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+        }
+
+
+        /* CONTENT */
+
+        .detail-content {
+
+            padding-top: 5px;
+
+        }
+
+        .detail-location {
+
+            color: #087f5b;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            margin-bottom: 8px;
+
+        }
+
+        .detail-content h1 {
+
+            font-size: 40px;
+
+            line-height: 1.25;
+
+            margin-bottom: 15px;
+
+        }
+
+        .detail-description {
+
+            color: #666;
+
+            font-size: 15px;
+
+            line-height: 1.8;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        /* INFO */
+
+        .detail-info-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 12px;
+
+            margin-bottom: 25px;
+
+        }
+
+        .detail-info-box {
+
+            background: white;
+
+            border: 1px solid #e8eeee;
+
+            border-radius: 10px;
+
+            padding: 15px;
+
+        }
+
+        .detail-info-box span {
+
+            display: block;
+
+            color: #888;
+
+            font-size: 12px;
+
+            margin-bottom: 4px;
+
+        }
+
+        .detail-info-box strong {
+
+            font-size: 15px;
+
+        }
+
+
+        /* PRICE */
+
+        .detail-price-box {
+
+            padding: 20px;
+
+            background: white;
+
+            border-radius: 12px;
+
+            border: 1px solid #e8eeee;
+
+            margin-bottom: 15px;
+
+        }
+
+        .detail-price-label {
+
+            color: #777;
+
+            font-size: 12px;
+
+        }
+
+        .detail-price {
+
+            color: #087f5b;
+
+            font-size: 30px;
+
+            font-weight: 700;
+
+        }
+
+        .detail-price small {
+
+            color: #777;
+
+            font-size: 13px;
+
+            font-weight: normal;
+
+        }
+
+
+        /* BUTTON */
+
+        .detail-book-button {
+
+            display: block;
+
+            width: 100%;
+
+            text-align: center;
+
+            background: #087f5b;
+
+            color: white;
+
+            padding: 15px;
+
+            border-radius: 9px;
+
+            font-size: 16px;
+
+            font-weight: 700;
+
+            transition: 0.2s;
+
+        }
+
+        .detail-book-button:hover {
+
+            background: #066b4c;
+
+        }
+
+
+        /* BODY */
+
+        .detail-body {
+
+            max-width: 1200px;
+
+            margin: auto;
+
+            padding: 70px 20px;
+
+        }
+
+        .detail-layout {
+
+            display: grid;
+
+            grid-template-columns:
+                2fr 1fr;
+
+            gap: 50px;
+
+        }
+
+
+        .detail-section {
+
+            margin-bottom: 45px;
+
+        }
+
+        .detail-section h2 {
+
+            font-size: 27px;
+
+            margin-bottom: 20px;
+
+        }
+
+        .detail-section p {
+
+            color: #666;
+
+            font-size: 14px;
+
+            line-height: 1.9;
+
+        }
+
+
+        /* ITINERARY */
+
+        .day-item {
+
+            display: grid;
+
+            grid-template-columns: 80px 1fr;
+
+            gap: 20px;
+
+            margin-bottom: 20px;
+
+        }
+
+        .day-number {
+
+            width: 70px;
+
+            height: 70px;
+
+            border-radius: 12px;
+
+            background: #e8f7f1;
+
+            color: #087f5b;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            font-weight: 700;
+
+            font-size: 14px;
+
+        }
+
+        .day-content {
+
+            padding-bottom: 20px;
+
+            border-bottom: 1px solid #eee;
+
+        }
+
+        .day-content h3 {
+
+            font-size: 17px;
+
+            margin-bottom: 5px;
+
+        }
+
+        .day-content p {
+
+            margin: 0;
+
+        }
+
+
+        /* INCLUDED */
+
+        .include-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 12px;
+
+        }
+
+        .include-item {
+
+            padding: 14px;
+
+            border-radius: 9px;
+
+            background: #f5f9f8;
+
+            font-size: 14px;
+
+        }
+
+        .include-item.yes {
+
+            color: #087f5b;
+
+        }
+
+        .include-item.no {
+
+            color: #777;
+
+        }
+
+
+        /* SIDE CARD */
+
+        .booking-side {
+
+            position: sticky;
+
+            top: 100px;
+
+        }
+
+        .side-card {
+
+            border: 1px solid #eee;
+
+            border-radius: 15px;
+
+            padding: 25px;
+
+            box-shadow:
+                0 5px 20px rgba(0,0,0,0.05);
+
+        }
+
+        .side-card h3 {
+
+            font-size: 20px;
+
+            margin-bottom: 18px;
+
+        }
+
+        .side-item {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            padding: 12px 0;
+
+            border-bottom: 1px solid #eee;
+
+            font-size: 14px;
+
+        }
+
+        .side-item span {
+
+            color: #777;
+
+        }
+
+        .side-total {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            margin: 20px 0;
+
+        }
+
+        .side-total strong {
+
+            color: #087f5b;
+
+            font-size: 22px;
+
+        }
+
+
+        /* RELATED */
+
+        .related-section {
+
+            background: #f5f9f8;
+
+            padding: 70px 20px;
+
+        }
+
+        .related-container {
+
+            max-width: 1200px;
+
+            margin: auto;
+
+        }
+
+        .related-title {
+
+            text-align: center;
+
+            margin-bottom: 35px;
+
+        }
+
+        .related-title p {
+
+            color: #087f5b;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            letter-spacing: 2px;
+
+        }
+
+        .related-title h2 {
+
+            font-size: 30px;
+
+        }
+
+        .related-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+
+        }
+
+        .related-card {
+
+            background: white;
+
+            border-radius: 13px;
+
+            overflow: hidden;
+
+            border: 1px solid #eee;
+
+        }
+
+        .related-card img {
+
+            height: 190px;
+
+            object-fit: cover;
+
+        }
+
+        .related-card-content {
+
+            padding: 18px;
+
+        }
+
+        .related-card-content h3 {
+
+            font-size: 17px;
+
+            margin-bottom: 5px;
+
+        }
+
+        .related-card-content p {
+
+            color: #087f5b;
+
+            font-size: 13px;
+
+        }
+
+
+        /* RESPONSIVE */
+
+        @media (max-width: 900px) {
+
+            .detail-main {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .detail-image {
+
+                height: 380px;
+
+            }
+
+            .detail-layout {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .booking-side {
+
+                position: static;
+
+            }
+
+        }
+
+
+        @media (max-width: 700px) {
+
+            .detail-content h1 {
+
+                font-size: 31px;
+
+            }
+
+            .detail-info-grid {
+
+                grid-template-columns: 1fr 1fr;
+
+            }
+
+            .include-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .related-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
+
+        @media (max-width: 450px) {
+
+            .detail-image {
+
+                height: 280px;
+
+            }
+
+            .detail-info-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .day-item {
+
+                grid-template-columns: 65px 1fr;
+
+                gap: 12px;
+
+            }
+
+            .day-number {
+
+                width: 60px;
+
+                height: 60px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- TOP BAR -->
+
+    <div class="top-bar">
+
+        <div class="top-bar-container">
+
+            <div>
+                📞 โทร: 08X-XXX-XXXX
+            </div>
+
+            <div>
+                💬 Line: @sktravel
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- HEADER -->
+
+    <header class="main-header">
+
+        <div class="header-container">
+
+
+            <a
+                href="index.html"
+                class="site-logo"
+            >
+
+                <span class="logo-icon">
+                    🌴
+                </span>
+
+                <div>
+
+                    <strong>
+                        SK Travel&Tour
+                    </strong>
+
+                    <small>
+                        HATYAI
+                    </small>
+
+                </div>
+
+            </a>
+
+
+            <nav class="main-menu">
+
+                <a href="index.html">
+                    หน้าแรก
+                </a>
+
+                <a
+                    href="tours.html"
+                    class="active"
+                >
+                    แพ็กเกจทัวร์
+                </a>
+
+                <a href="recommend.html">
+                    🤖 แนะนำทัวร์
+                </a>
+
+                <a href="booking.html">
+                    จองทัวร์
+                </a>
+
+                <a href="about.html">
+                    เกี่ยวกับเรา
+                </a>
+
+                <a href="contact.html">
+                    ติดต่อเรา
+                </a>
+
+            </nav>
+
+
+            <a
+                href="login.html"
+                class="member-button"
+            >
+                👤 สมาชิก
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- HERO -->
+
+    <section class="detail-hero">
+
+        <div class="detail-container">
+
+            <div class="breadcrumb">
+
+                <a href="index.html">
+                    หน้าแรก
+                </a>
+
+                &nbsp; / &nbsp;
+
+                <a href="tours.html">
+                    แพ็กเกจทัวร์
+                </a>
+
+                &nbsp; / &nbsp;
+
+                เกาะหลีเป๊ะ
+
+            </div>
+
+
+            <div class="detail-main">
+
+
+                <!-- IMAGE -->
+
+                <div class="detail-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=85"
+                        alt="ทัวร์เกาะหลีเป๊ะ"
+                    >
+
+                    <span class="detail-tag">
+                        ⭐ ยอดนิยม
+                    </span>
+
+                </div>
+
+
+                <!-- CONTENT -->
+
+                <div class="detail-content">
+
+                    <div class="detail-location">
+                        🏝️ สตูล
+                    </div>
+
+                    <h1>
+                        ทัวร์เกาะหลีเป๊ะ
+                    </h1>
+
+                    <p class="detail-description">
+
+                        สัมผัสความสวยงามของเกาะหลีเป๊ะ
+                        ทะเลสีฟ้าใส หาดทรายขาว
+                        พร้อมกิจกรรมดำน้ำชมปะการัง
+                        และพักผ่อนท่ามกลางธรรมชาติ
+
+                    </p>
+
+
+                    <div class="detail-info-grid">
+
+                        <div class="detail-info-box">
+
+                            <span>
+                                ระยะเวลา
+                            </span>
+
+                            <strong>
+                                📅 3 วัน 2 คืน
+                            </strong>
+
+                        </div>
+
+                        <div class="detail-info-box">
+
+                            <span>
+                                จำนวนผู้เดินทาง
+                            </span>
+
+                            <strong>
+                                👥 สูงสุด 15 คน
+                            </strong>
+
+                        </div>
+
+                        <div class="detail-info-box">
+
+                            <span>
+                                ประเภท
+                            </span>
+
+                            <strong>
+                                🏝️ ทัวร์เกาะ
+                            </strong>
+
+                        </div>
+
+                        <div class="detail-info-box">
+
+                            <span>
+                                จุดเริ่มต้น
+                            </span>
+
+                            <strong>
+                                📍 หาดใหญ่
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="detail-price-box">
+
+                        <div class="detail-price-label">
+                            ราคาเริ่มต้น
+                        </div>
+
+                        <div class="detail-price">
+
+                            ฿3,990
+
+                            <small>
+                                / คน
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <a
+                        href="booking.html"
+                        class="detail-book-button"
+                    >
+                        📝 จองทัวร์นี้
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- DETAIL BODY -->
+
+    <main class="detail-body">
+
+        <div class="detail-layout">
+
+
+            <!-- LEFT -->
+
+            <div>
+
+
+                <!-- OVERVIEW -->
+
+                <section class="detail-section">
+
+                    <h2>
+                        รายละเอียดโปรแกรม
+                    </h2>
+
+                    <p>
+
+                        โปรแกรมทัวร์เกาะหลีเป๊ะ
+                        เหมาะสำหรับผู้ที่ต้องการพักผ่อน
+                        และสัมผัสบรรยากาศทะเลอันดามัน
+                        โดยเดินทางจากหาดใหญ่
+                        พร้อมกิจกรรมท่องเที่ยวตามโปรแกรม
+
+                    </p>
+
+                </section>
+
+
+                <!-- ITINERARY -->
+
+                <section class="detail-section">
+
+                    <h2>
+                        โปรแกรมการเดินทาง
+                    </h2>
+
+
+                    <div class="day-item">
+
+                        <div class="day-number">
+                            DAY<br>01
+                        </div>
+
+                        <div class="day-content">
+
+                            <h3>
+                                เดินทางจากหาดใหญ่ → เกาะหลีเป๊ะ
+                            </h3>
+
+                            <p>
+                                ออกเดินทางจากหาดใหญ่
+                                เดินทางสู่ท่าเรือ
+                                และเดินทางต่อไปยังเกาะหลีเป๊ะ
+                                เช็กอินที่พักและพักผ่อนตามอัธยาศัย
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="day-item">
+
+                        <div class="day-number">
+                            DAY<br>02
+                        </div>
+
+                        <div class="day-content">
+
+                            <h3>
+                                ดำน้ำและเที่ยวรอบเกาะ
+                            </h3>
+
+                            <p>
+                                ออกเดินทางชมเกาะต่าง ๆ
+                                ดำน้ำชมปะการัง
+                                เล่นน้ำทะเล
+                                และพักผ่อนบนชายหาด
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="day-item">
+
+                        <div class="day-number">
+                            DAY<br>03
+                        </div>
+
+                        <div class="day-content">
+
+                            <h3>
+                                เดินทางกลับหาดใหญ่
+                            </h3>
+
+                            <p>
+                                รับประทานอาหารเช้า
+                                เช็กเอาต์จากที่พัก
+                                เดินทางกลับหาดใหญ่
+                                และสิ้นสุดโปรแกรม
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- INCLUDED -->
+
+                <section class="detail-section">
+
+                    <h2>
+                        สิ่งที่รวมในแพ็กเกจ
+                    </h2>
+
+
+                    <div class="include-grid">
+
+                        <div class="include-item yes">
+                            ✓ รถรับ-ส่งตามโปรแกรม
+                        </div>
+
+                        <div class="include-item yes">
+                            ✓ ที่พัก 2 คืน
+                        </div>
+
+                        <div class="include-item yes">
+                            ✓ อาหารตามรายการ
+                        </div>
+
+                        <div class="include-item yes">
+                            ✓ เรือท่องเที่ยว
+                        </div>
+
+                        <div class="include-item yes">
+                            ✓ อุปกรณ์ดำน้ำ
+                        </div>
+
+                        <div class="include-item yes">
+                            ✓ ประกันการเดินทาง
+                        </div>
+
+                        <div class="include-item no">
+                            ✕ ค่าใช้จ่ายส่วนตัว
+                        </div>
+
+                        <div class="include-item no">
+                            ✕ ค่าอาหารนอกเหนือรายการ
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- NOTES -->
+
+                <section class="detail-section">
+
+                    <h2>
+                        หมายเหตุ
+                    </h2>
+
+                    <p>
+
+                        โปรแกรมและเวลาเดินทางอาจมีการเปลี่ยนแปลง
+                        ตามสภาพอากาศและสถานการณ์หน้างาน
+                        กรุณาตรวจสอบรายละเอียดก่อนทำการจอง
+
+                    </p>
+
+                </section>
+
+
+            </div>
+
+
+            <!-- RIGHT -->
+
+            <aside class="booking-side">
+
+                <div class="side-card">
+
+                    <h3>
+                        สรุปแพ็กเกจ
+                    </h3>
+
+
+                    <div class="side-item">
+
+                        <span>
+                            โปรแกรม
+                        </span>
+
+                        <strong>
+                            เกาะหลีเป๊ะ
+                        </strong>
+
+                    </div>
+
+
+                    <div class="side-item">
+
+                        <span>
+                            ระยะเวลา
+                        </span>
+
+                        <strong>
+                            3 วัน 2 คืน
+                        </strong>
+
+                    </div>
+
+
+                    <div class="side-item">
+
+                        <span>
+                            เริ่มจาก
+                        </span>
+
+                        <strong>
+                            หาดใหญ่
+                        </strong>
+
+                    </div>
+
+
+                    <div class="side-item">
+
+                        <span>
+                            ผู้เดินทาง
+                        </span>
+
+                        <strong>
+                            สูงสุด 15 คน
+                        </strong>
+
+                    </div>
+
+
+                    <div class="side-total">
+
+                        <span>
+                            ราคาเริ่มต้น
+                        </span>
+
+                        <strong>
+                            ฿3,990
+                        </strong>
+
+                    </div>
+
+
+                    <a
+                        href="booking.html"
+                        class="detail-book-button"
+                    >
+                        จองทัวร์
+                    </a>
+
+                </div>
+
+            </aside>
+
+
+        </div>
+
+    </main>
+
+
+    <!-- RELATED -->
+
+    <section class="related-section">
+
+        <div class="related-container">
+
+
+            <div class="related-title">
+
+                <p>
+                    YOU MAY ALSO LIKE
+                </p>
+
+                <h2>
+                    โปรแกรมทัวร์ที่น่าสนใจ
+                </h2>
+
+            </div>
+
+
+            <div class="related-grid">
+
+
+                <a
+                    href="tour-detail.html"
+                    class="related-card"
+                >
+
+                    <img
+                        src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80"
+                        alt="กระบี่"
+                    >
+
+                    <div class="related-card-content">
+
+                        <h3>
+                            ทัวร์กระบี่ 4 เกาะ
+                        </h3>
+
+                        <p>
+                            เริ่มต้น ฿2,490 / คน
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+                <a
+                    href="tour-detail.html"
+                    class="related-card"
+                >
+
+                    <img
+                        src="https://images.unsplash.com/photo-1504512485720-7d83a16ee930?auto=format&fit=crop&w=900&q=80"
+                        alt="ภูเก็ต"
+                    >
+
+                    <div class="related-card-content">
+
+                        <h3>
+                            ทัวร์ภูเก็ตและเกาะ
+                        </h3>
+
+                        <p>
+                            เริ่มต้น ฿6,490 / คน
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+                <a
+                    href="tour-detail.html"
+                    class="related-card"
+                >
+
+                    <img
+                        src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=900&q=80"
+                        alt="ธรรมชาติ"
+                    >
+
+                    <div class="related-card-content">
+
+                        <h3>
+                            ทัวร์ธรรมชาติกระบี่
+                        </h3>
+
+                        <p>
+                            เริ่มต้น ฿1,890 / คน
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer class="main-footer">
+
+        <div class="footer-container">
+
+
+            <div class="footer-about">
+
+                <div class="footer-logo">
+                    🌴 SK Travel&Tour Hatyai
+                </div>
+
+                <p>
+                    แพลตฟอร์มบริการท่องเที่ยว
+                    ที่ช่วยให้การค้นหา
+                    วางแผน และจองทริป
+                    เป็นเรื่องง่าย
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    เมนู
+                </h3>
+
+                <a href="index.html">
+                    หน้าแรก
+                </a>
+
+                <a href="tours.html">
+                    แพ็กเกจทัวร์
+                </a>
+
+                <a href="recommend.html">
+                    แนะนำทัวร์
+                </a>
+
+                <a href="booking.html">
+                    จองทัวร์
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    สมาชิก
+                </h3>
+
+                <a href="login.html">
+                    เข้าสู่ระบบ
+                </a>
+
+                <a href="register.html">
+                    สมัครสมาชิก
+                </a>
+
+                <a href="profile.html">
+                    โปรไฟล์
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    ติดต่อ
+                </h3>
+
+                <p>
+                    📍 หาดใหญ่ จ.สงขลา
+                </p>
+
+                <p>
+                    📞 08X-XXX-XXXX
+                </p>
+
+                <p>
+                    💬 Line: @sktravel
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            © 2026 SK Travel&Tour Hatyai
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
